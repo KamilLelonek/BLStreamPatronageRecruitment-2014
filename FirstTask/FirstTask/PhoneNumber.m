@@ -36,8 +36,8 @@
     if (![[self class] isNumberValid: aNumber])
     {
         NSLog(@"\nNot a valid phone number");
-        _areaCode = _numberAsInt = -1;
-        _formattedNumber = @"-1";
+        _areaCode = _numberAsInt = 0;
+        _formattedNumber = nil;
         return;
     }
     
