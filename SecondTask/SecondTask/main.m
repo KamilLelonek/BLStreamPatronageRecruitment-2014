@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZooPath.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         NSLog(@"Hello, World!");
+        
+        ZooPath *zooPath = [ZooPath zooPathWithName: @"" andTime: @"" andLength: @"" andRating: @1];
+        NSLog([zooPath description]);
     }
     return 0;
 }
