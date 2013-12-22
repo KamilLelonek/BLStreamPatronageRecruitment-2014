@@ -41,18 +41,6 @@
     XCTAssertTrue([PhoneNumber isNumberValid: number]);
 }
 
-- (void) testShouldNotCreateObject
-{
-    PhoneNumber *pn = [PhoneNumber phoneNumberWithString: @""];
-    XCTAssertNil(pn);
-    pn = [PhoneNumber phoneNumberWithString: @"+"];
-    XCTAssertNil(pn);
-    pn = [PhoneNumber phoneNumberWithString: @"+48"];
-    XCTAssertNil(pn);
-    pn = [PhoneNumber phoneNumberWithString: @"+485"];
-    XCTAssertNil(pn);
-}
-
 - (void) testShouldCreateObject
 {
     PhoneNumber *pn = [PhoneNumber phoneNumberWithString: @"+48 525 458 784"];
@@ -60,6 +48,14 @@
     pn = [PhoneNumber phoneNumberWithString: @"+48525458784"];
     XCTAssertNotNil(pn);
     pn = [PhoneNumber phoneNumberWithString: @" +48525458784 "];
+    XCTAssertNotNil(pn);
+    pn = [PhoneNumber phoneNumberWithString: @""];
+    XCTAssertNotNil(pn);
+    pn = [PhoneNumber phoneNumberWithString: @"+"];
+    XCTAssertNotNil(pn);
+    pn = [PhoneNumber phoneNumberWithString: @"+48"];
+    XCTAssertNotNil(pn);
+    pn = [PhoneNumber phoneNumberWithString: @"+485"];
     XCTAssertNotNil(pn);
 }
 

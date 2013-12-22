@@ -20,12 +20,10 @@
     self = [super init];
     if (self)
     {
-        if (![[self class] isNumberValid: aNumber])
+        if ([[self class] isNumberValid: aNumber])
         {
-            return NULL;
+            [self setNumber: aNumber];
         }
-        
-        [self setNumber: aNumber];
     }
     
     return self;

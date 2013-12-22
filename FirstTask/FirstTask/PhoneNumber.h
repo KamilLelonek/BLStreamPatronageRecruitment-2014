@@ -10,14 +10,15 @@
 
 @interface PhoneNumber : NSObject
 
-@property (readonly) NSInteger numberAsInt;
-@property (readonly) NSInteger areaCode;
-@property (readonly) NSString  *formattedNumber;
+@property (nonatomic, readonly) NSInteger numberAsInt;
+@property (nonatomic, readonly) NSInteger areaCode;
+@property (nonatomic, readonly) NSString  *formattedNumber;
 
 + (id)          phoneNumberWithString:  (NSString *) aNumber;
 + (BOOL)        isNumberValid:          (NSString *) aNumber;
 + (NSString *)  formatNumber:           (NSString *) aNumber;
 
+- (id)          initWithNumber:         (NSString *) aNumber;
 - (void)        setNumber:              (NSString *) aNumber;
 - (NSString *)  description;
 
