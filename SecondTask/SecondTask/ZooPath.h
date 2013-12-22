@@ -8,17 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString* const NAME   = @"name";
+static NSString* const TIME   = @"time";
+static NSString* const LENGTH = @"length";
+static NSString* const RATING = @"rating";
+
 @interface ZooPath : NSObject {
-@private NSMutableDictionary *zooPathDictionary;
+    @private NSMutableDictionary *zooPathDictionary;
 }
 
 @property (nonatomic) NSString  *name;
-@property (nonatomic) NSString  *time;
-@property (nonatomic) NSString  *length;
+@property (nonatomic) NSNumber  *time;
+@property (nonatomic) NSNumber  *length;
 @property (nonatomic) NSNumber  *rating;
 
-- (id) initWithName:      (NSString*)aName andTime: (NSString*)aTime andLength: (NSString*)aLength andRating: (NSNumber*)aRating;
-+ (id) zooPathWithName:   (NSString*)aName andTime: (NSString*)aTime andLength: (NSString*)aLength andRating: (NSNumber*)aRating;
+- (id) initWithName:      (NSString*)aName andTime: (NSNumber*)aTime andLength: (NSNumber*)aLength andRating: (NSNumber*)aRating;
++ (id) zooPathWithName:   (NSString*)aName andTime: (NSNumber*)aTime andLength: (NSNumber*)aLength andRating: (NSNumber*)aRating;
 
 - (NSString *) description;
 

@@ -7,9 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "SecondTask_Tests.h"
 #import "ZooPath.h"
 
-@interface ZooPath_Test : XCTestCase {
+@interface ZooPath_Test : SecondTask_Tests {
     ZooPath *zooPath;
 }
 @end
@@ -19,13 +20,13 @@
 - (void)setUp
 {
     [super setUp];
-    zooPath = [ZooPath zooPathWithName: @"" andTime: @"" andLength: @"" andRating: @0];
+    zooPath = [ZooPath zooPathWithName: @"" andTime: @0 andLength: @0 andRating: @0];
 }
 
 - (void) testShouldCreateZooPath {
     XCTAssertEqual(zooPath.name,    @"");
-    XCTAssertEqual(zooPath.time,    @"");
-    XCTAssertEqual(zooPath.length,  @"");
+    XCTAssertTrue([self isFloat: zooPath.time equalTo: @0.0f]);
+    XCTAssertEqual(zooPath.length,  @0);
     XCTAssertEqual(zooPath.rating,  @0);
 }
 
@@ -33,11 +34,11 @@
     zooPath.name = @"name";
     XCTAssertEqual(zooPath.name, @"name");
     
-    zooPath.time = @"time";
-    XCTAssertEqual(zooPath.time, @"time");
+    zooPath.time = @0.5f;
+    XCTAssertTrue([super isFloat:zooPath.time equalTo: @0.5f]);
     
-    zooPath.length = @"length";
-    XCTAssertEqual(zooPath.length, @"length");
+    zooPath.length = @100;
+    XCTAssertEqual(zooPath.length,  @100);
     
     zooPath.rating = @1;
     XCTAssertEqual(zooPath.rating, @1);

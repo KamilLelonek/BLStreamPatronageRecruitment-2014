@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05583C69186772BB006C3FFC /* ZooTrip_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05583C68186772BB006C3FFC /* ZooTrip_Test.m */; };
+		05583C6A18677334006C3FFC /* ZooTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D939186751E600DD45CF /* ZooTrip.m */; };
 		0571D936186748DD00DD45CF /* ZooPath_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D934186748CA00DD45CF /* ZooPath_Test.m */; };
 		0571D93718674B5B00DD45CF /* ZooPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BCAD08186747BE00FE4FA6 /* ZooPath.m */; };
+		0571D93A186751E600DD45CF /* ZooTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D939186751E600DD45CF /* ZooTrip.m */; };
 		05BCACFA1867478100FE4FA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BCACF91867478100FE4FA6 /* Foundation.framework */; };
 		05BCACFD1867478100FE4FA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BCACFC1867478100FE4FA6 /* main.m */; };
 		05BCAD011867478100FE4FA6 /* SecondTask.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05BCAD001867478100FE4FA6 /* SecondTask.1 */; };
@@ -42,7 +45,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05583C68186772BB006C3FFC /* ZooTrip_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooTrip_Test.m; sourceTree = "<group>"; };
+		05583C6B1867A2EE006C3FFC /* SecondTask_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTask_Tests.h; sourceTree = "<group>"; };
 		0571D934186748CA00DD45CF /* ZooPath_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooPath_Test.m; sourceTree = "<group>"; };
+		0571D938186751E600DD45CF /* ZooTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooTrip.h; sourceTree = "<group>"; };
+		0571D939186751E600DD45CF /* ZooTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooTrip.m; sourceTree = "<group>"; };
 		05BCACF61867478100FE4FA6 /* SecondTask */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SecondTask; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BCACF91867478100FE4FA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		05BCACFC1867478100FE4FA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +121,8 @@
 				05BCACFE1867478100FE4FA6 /* Supporting Files */,
 				05BCAD07186747BE00FE4FA6 /* ZooPath.h */,
 				05BCAD08186747BE00FE4FA6 /* ZooPath.m */,
+				0571D938186751E600DD45CF /* ZooTrip.h */,
+				0571D939186751E600DD45CF /* ZooTrip.m */,
 			);
 			path = SecondTask;
 			sourceTree = "<group>";
@@ -129,8 +138,10 @@
 		05BCAD11186747FD00FE4FA6 /* SecondTask Tests */ = {
 			isa = PBXGroup;
 			children = (
+				05583C68186772BB006C3FFC /* ZooTrip_Test.m */,
 				0571D934186748CA00DD45CF /* ZooPath_Test.m */,
 				05BCAD17186747FD00FE4FA6 /* SecondTask_Tests.m */,
+				05583C6B1867A2EE006C3FFC /* SecondTask_Tests.h */,
 				05BCAD12186747FD00FE4FA6 /* Supporting Files */,
 			);
 			path = "SecondTask Tests";
@@ -234,6 +245,7 @@
 			files = (
 				05BCACFD1867478100FE4FA6 /* main.m in Sources */,
 				05BCAD09186747BE00FE4FA6 /* ZooPath.m in Sources */,
+				0571D93A186751E600DD45CF /* ZooTrip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05583C6A18677334006C3FFC /* ZooTrip.m in Sources */,
 				0571D93718674B5B00DD45CF /* ZooPath.m in Sources */,
 				05BCAD18186747FD00FE4FA6 /* SecondTask_Tests.m in Sources */,
 				0571D936186748DD00DD45CF /* ZooPath_Test.m in Sources */,
+				05583C69186772BB006C3FFC /* ZooTrip_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

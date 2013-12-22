@@ -5,12 +5,7 @@
 //  Created by squixy on 22.12.2013.
 //  Copyright (c) 2013 squixy. All rights reserved.
 //
-
-#import <XCTest/XCTest.h>
-
-@interface SecondTask_Tests : XCTestCase
-
-@end
+#import "SecondTask_Tests.h"
 
 @implementation SecondTask_Tests
 
@@ -24,6 +19,10 @@
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (BOOL) isFloat: (NSNumber*) first equalTo: (NSNumber*) second {
+    return abs([first floatValue] - [second floatValue]) < FLT_EPSILON;
 }
 
 @end
