@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0552174F186836D600A888A7 /* ZooTrip+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 0552174E186836D600A888A7 /* ZooTrip+Extended.m */; };
+		05521752186838AD00A888A7 /* RemotePrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 05521751186838AD00A888A7 /* RemotePrinter.m */; };
 		05583C69186772BB006C3FFC /* ZooTrip_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05583C68186772BB006C3FFC /* ZooTrip_Test.m */; };
 		05583C6A18677334006C3FFC /* ZooTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D939186751E600DD45CF /* ZooTrip.m */; };
 		0571D936186748DD00DD45CF /* ZooPath_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571D934186748CA00DD45CF /* ZooPath_Test.m */; };
@@ -45,6 +47,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0552174D186836D600A888A7 /* ZooTrip+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZooTrip+Extended.h"; sourceTree = "<group>"; };
+		0552174E186836D600A888A7 /* ZooTrip+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZooTrip+Extended.m"; sourceTree = "<group>"; };
+		05521750186838AD00A888A7 /* RemotePrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemotePrinter.h; sourceTree = "<group>"; };
+		05521751186838AD00A888A7 /* RemotePrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemotePrinter.m; sourceTree = "<group>"; };
 		05583C68186772BB006C3FFC /* ZooTrip_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooTrip_Test.m; sourceTree = "<group>"; };
 		05583C6B1867A2EE006C3FFC /* SecondTask_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTask_Tests.h; sourceTree = "<group>"; };
 		05583C6C1867A9A3006C3FFC /* ZooTripDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooTripDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +131,10 @@
 				0571D938186751E600DD45CF /* ZooTrip.h */,
 				0571D939186751E600DD45CF /* ZooTrip.m */,
 				05583C6C1867A9A3006C3FFC /* ZooTripDelegate.h */,
+				0552174D186836D600A888A7 /* ZooTrip+Extended.h */,
+				0552174E186836D600A888A7 /* ZooTrip+Extended.m */,
+				05521750186838AD00A888A7 /* RemotePrinter.h */,
+				05521751186838AD00A888A7 /* RemotePrinter.m */,
 			);
 			path = SecondTask;
 			sourceTree = "<group>";
@@ -245,6 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0552174F186836D600A888A7 /* ZooTrip+Extended.m in Sources */,
+				05521752186838AD00A888A7 /* RemotePrinter.m in Sources */,
 				05BCACFD1867478100FE4FA6 /* main.m in Sources */,
 				05BCAD09186747BE00FE4FA6 /* ZooPath.m in Sources */,
 				0571D93A186751E600DD45CF /* ZooTrip.m in Sources */,
