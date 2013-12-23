@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ZooPath.h"
+#import "ZooTripDelegate.h"
 
 typedef NS_ENUM(NSInteger, TripPreference) {
     LongTrip,
@@ -18,6 +19,9 @@ typedef NS_ENUM(NSInteger, TripPreference) {
 @interface ZooTrip : NSObject {
     NSMutableArray  *visitedPaths;
 }
+
+@property (nonatomic, weak) id <ZooTripDelegate> delegate;
+- (void) start;
 
 - (id) findBestPathByUserPreference:(TripPreference) tripPreference;
 

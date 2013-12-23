@@ -13,7 +13,8 @@ NSArray *descriptorsLength;
 NSArray *descriptorsRecommendation;
 NSArray *descriptorsTime;
 
-@implementation ZooTrip;
+@implementation ZooTrip
+@synthesize delegate;
 
 + (void)initialize {
     if (self == [ZooTrip class]) {
@@ -56,6 +57,12 @@ NSArray *descriptorsTime;
 
 - (id) findTheFastestTrip {
     return [predefiniedPaths sortedArrayUsingDescriptors: descriptorsTime][0];
+}
+
+- (void) start {
+    ZooPath* mostRecommendedPath = [self findBestPathByUserPreference: RecommendedTrip];
+    [visitedPaths addObject: mostRecommendedPath];
+    [delegate zooTripDidStartOnPath: mostRecommendedPath];
 }
 
 @end
