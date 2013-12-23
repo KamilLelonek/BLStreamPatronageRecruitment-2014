@@ -12,7 +12,7 @@
 - (void) setName:   (NSString *)    name   { [zooPathDictionary setObject: name   forKey: NAME];   }
 - (void) setTime:   (NSNumber *)    time   { [zooPathDictionary setObject: time   forKey: TIME];   }
 - (void) setLength: (NSNumber *)    length { [zooPathDictionary setObject: length forKey: LENGTH]; }
-- (void) setRating: (NSNumber*)     rating { [zooPathDictionary setObject: rating forKey: RATING]; }
+- (void) setRating: (NSNumber *)    rating { [zooPathDictionary setObject: rating forKey: RATING]; }
 
 - (NSString*) name   { return zooPathDictionary[NAME];   }
 - (NSNumber*) time   { return zooPathDictionary[TIME];   }
@@ -25,12 +25,13 @@
           andRating:    (NSNumber*) aRating
 {
     self = [super init];
-    zooPathDictionary = [[NSMutableDictionary alloc] init];
     if (self) {
-        [self setName:   aName];
-        [self setTime:   aTime];
-        [self setLength: aLength];
-        [self setRating: aRating];
+        zooPathDictionary = [@{
+                                NAME:      [aName   copy],
+                                TIME:      [aTime   copy],
+                                LENGTH:    [aLength copy],
+                                RATING:    [aRating copy]
+                               } mutableCopy];
     }
     
     return self;
@@ -41,10 +42,10 @@
              andLength:    (NSNumber*) aLength
              andRating:    (NSNumber*) aRating
 {
-    return [[ZooPath alloc] initWithName:   aName
-                              andTime:      aTime
-                            andLength:      aLength
-                            andRating:      aRating];
+    return [[ZooPath alloc] initWithName: aName
+                                 andTime: aTime
+                               andLength: aLength
+                               andRating: aRating];
 }
 
 - (NSString*) lengthN2S: (NSNumber*) aLength {
