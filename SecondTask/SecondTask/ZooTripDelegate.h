@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZooPath.h"
 
 @protocol ZooTripDelegate <NSObject>
     - (void) zooTripDidStartOnPath: (ZooPath*) startPath;

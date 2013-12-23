@@ -7,13 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZooPath.h"
+#import "RemotePrinter.h"
+#import "ZooTrip.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        NSLog(@"Hello, World!");
+        RemotePrinter *rPrinter = [[RemotePrinter alloc] init];
+        ZooTrip *zooTrip = [[ZooTrip alloc] init];
+        zooTrip.delegate = rPrinter;
+        
+        id bestPath = [zooTrip findBestPathByUserPreference:FastTrip];
+        NSLog(@"Found Fastest path %@", bestPath);
+        
+        bestPath = [zooTrip findBestPathByUserPreference:RecommendedTrip];
+        NSLog(@"Found Recommended path %@", bestPath);
+        
+        bestPath = [zooTrip findBestPathByUserPreference:LongTrip];
+        NSLog(@"Found Longest path %@", bestPath);
+        
+        [zooTrip start];
     }
     return 0;
 }
