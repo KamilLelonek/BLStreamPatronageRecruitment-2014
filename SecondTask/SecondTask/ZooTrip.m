@@ -8,10 +8,10 @@
 
 #import "ZooTrip.h"
 
-NSArray *predefiniedPaths;
-NSArray *descriptorsLength;
-NSArray *descriptorsRecommendation;
-NSArray *descriptorsTime;
+static NSArray *predefiniedPaths;
+static NSArray *descriptorsLength;
+static NSArray *descriptorsRecommendation;
+static NSArray *descriptorsTime;
 
 @implementation ZooTrip
 @synthesize delegate;
@@ -27,7 +27,7 @@ NSArray *descriptorsTime;
         
         NSSortDescriptor *sortByLength          = [[NSSortDescriptor alloc] initWithKey: LENGTH ascending: NO];
         NSSortDescriptor *sortByRecommendation  = [[NSSortDescriptor alloc] initWithKey: RATING ascending: NO];
-        NSSortDescriptor *sortByTime            = [[NSSortDescriptor alloc] initWithKey: TIME   ascending: NO];
+        NSSortDescriptor *sortByTime            = [[NSSortDescriptor alloc] initWithKey: TIME   ascending: YES];
         descriptorsLength          = [NSArray arrayWithObject: sortByLength];
         descriptorsRecommendation  = [NSArray arrayWithObject: sortByRecommendation];
         descriptorsTime            = [NSArray arrayWithObject: sortByTime];

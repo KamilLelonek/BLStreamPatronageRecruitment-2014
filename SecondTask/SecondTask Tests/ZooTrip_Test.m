@@ -32,7 +32,7 @@
     XCTAssertEqual(path.rating, @6);
     
     path = [zooTrip findBestPathByUserPreference: FastTrip];
-    XCTAssertEqual(path.time, @3);
+    XCTAssertEqual(path.time, @0.4f);
 }
 
 @end
