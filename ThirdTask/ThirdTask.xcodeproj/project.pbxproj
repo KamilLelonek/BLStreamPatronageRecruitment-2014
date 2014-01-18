@@ -13,7 +13,23 @@
 		05E96CD3188AA733009FDB8C /* GpsSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD2188AA733009FDB8C /* GpsSimulator.m */; };
 		05E96CD6188AA741009FDB8C /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD5188AA741009FDB8C /* UserData.m */; };
 		05E96CD9188AA754009FDB8C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD8188AA754009FDB8C /* Location.m */; };
+		05E96CF2188B1B80009FDB8C /* StorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CF1188B1B80009FDB8C /* StorageHelper.m */; };
+		05E96CF8188B2B4B009FDB8C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E96CDF188B0E83009FDB8C /* XCTest.framework */; };
+		05E96CFE188B2B4B009FDB8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05E96CFC188B2B4B009FDB8C /* InfoPlist.strings */; };
+		05E96D08188B2B74009FDB8C /* StorageHelper_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */; };
+		05E96D09188B2E5E009FDB8C /* StorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CF1188B1B80009FDB8C /* StorageHelper.m */; };
+		05E96D0A188B2E7F009FDB8C /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD5188AA741009FDB8C /* UserData.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05E96D02188B2B4B009FDB8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E96CB8188AA6C0009FDB8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E96CBF188AA6C0009FDB8C;
+			remoteInfo = ThirdTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		05E96CBE188AA6C0009FDB8C /* CopyFiles */ = {
@@ -40,6 +56,14 @@
 		05E96CD5188AA741009FDB8C /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		05E96CD7188AA754009FDB8C /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		05E96CD8188AA754009FDB8C /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		05E96CDF188B0E83009FDB8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		05E96CF0188B1B80009FDB8C /* StorageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageHelper.h; sourceTree = "<group>"; };
+		05E96CF1188B1B80009FDB8C /* StorageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageHelper.m; sourceTree = "<group>"; };
+		05E96CF7188B2B4B009FDB8C /* ThirdTask Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ThirdTask Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E96CFB188B2B4B009FDB8C /* ThirdTask Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThirdTask Tests-Info.plist"; sourceTree = "<group>"; };
+		05E96CFD188B2B4B009FDB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05E96D01188B2B4B009FDB8C /* ThirdTask Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThirdTask Tests-Prefix.pch"; sourceTree = "<group>"; };
+		05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StorageHelper_Test.m; path = ../StorageHelper_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05E96CF4188B2B4B009FDB8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E96CF8188B2B4B009FDB8C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				05E96CC5188AA6C1009FDB8C /* ThirdTask */,
+				05E96CF9188B2B4B009FDB8C /* ThirdTask Tests */,
 				05E96CC2188AA6C1009FDB8C /* Frameworks */,
 				05E96CC1188AA6C1009FDB8C /* Products */,
 			);
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				05E96CC0188AA6C1009FDB8C /* ThirdTask */,
+				05E96CF7188B2B4B009FDB8C /* ThirdTask Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				05E96CC3188AA6C1009FDB8C /* Foundation.framework */,
+				05E96CDF188B0E83009FDB8C /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +126,8 @@
 				05E96CD5188AA741009FDB8C /* UserData.m */,
 				05E96CD7188AA754009FDB8C /* Location.h */,
 				05E96CD8188AA754009FDB8C /* Location.m */,
+				05E96CF0188B1B80009FDB8C /* StorageHelper.h */,
+				05E96CF1188B1B80009FDB8C /* StorageHelper.m */,
 			);
 			path = ThirdTask;
 			sourceTree = "<group>";
@@ -99,6 +136,25 @@
 			isa = PBXGroup;
 			children = (
 				05E96CC9188AA6C1009FDB8C /* ThirdTask-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05E96CF9188B2B4B009FDB8C /* ThirdTask Tests */ = {
+			isa = PBXGroup;
+			children = (
+				05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */,
+				05E96CFA188B2B4B009FDB8C /* Supporting Files */,
+			);
+			path = "ThirdTask Tests";
+			sourceTree = "<group>";
+		};
+		05E96CFA188B2B4B009FDB8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05E96CFB188B2B4B009FDB8C /* ThirdTask Tests-Info.plist */,
+				05E96CFC188B2B4B009FDB8C /* InfoPlist.strings */,
+				05E96D01188B2B4B009FDB8C /* ThirdTask Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,6 +179,24 @@
 			productReference = 05E96CC0188AA6C1009FDB8C /* ThirdTask */;
 			productType = "com.apple.product-type.tool";
 		};
+		05E96CF6188B2B4B009FDB8C /* ThirdTask Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E96D06188B2B4B009FDB8C /* Build configuration list for PBXNativeTarget "ThirdTask Tests" */;
+			buildPhases = (
+				05E96CF3188B2B4B009FDB8C /* Sources */,
+				05E96CF4188B2B4B009FDB8C /* Frameworks */,
+				05E96CF5188B2B4B009FDB8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05E96D03188B2B4B009FDB8C /* PBXTargetDependency */,
+			);
+			name = "ThirdTask Tests";
+			productName = "ThirdTask Tests";
+			productReference = 05E96CF7188B2B4B009FDB8C /* ThirdTask Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +205,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = squixy;
+				TargetAttributes = {
+					05E96CF6188B2B4B009FDB8C = {
+						TestTargetID = 05E96CBF188AA6C0009FDB8C;
+					};
+				};
 			};
 			buildConfigurationList = 05E96CBB188AA6C0009FDB8C /* Build configuration list for PBXProject "ThirdTask" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -145,9 +224,21 @@
 			projectRoot = "";
 			targets = (
 				05E96CBF188AA6C0009FDB8C /* ThirdTask */,
+				05E96CF6188B2B4B009FDB8C /* ThirdTask Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05E96CF5188B2B4B009FDB8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E96CFE188B2B4B009FDB8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05E96CBC188AA6C0009FDB8C /* Sources */ = {
@@ -155,13 +246,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E96CC7188AA6C1009FDB8C /* main.m in Sources */,
+				05E96CF2188B1B80009FDB8C /* StorageHelper.m in Sources */,
 				05E96CD6188AA741009FDB8C /* UserData.m in Sources */,
 				05E96CD9188AA754009FDB8C /* Location.m in Sources */,
 				05E96CD3188AA733009FDB8C /* GpsSimulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05E96CF3188B2B4B009FDB8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E96D0A188B2E7F009FDB8C /* UserData.m in Sources */,
+				05E96D09188B2E5E009FDB8C /* StorageHelper.m in Sources */,
+				05E96D08188B2B74009FDB8C /* StorageHelper_Test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05E96D03188B2B4B009FDB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E96CBF188AA6C0009FDB8C /* ThirdTask */;
+			targetProxy = 05E96D02188B2B4B009FDB8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05E96CFC188B2B4B009FDB8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05E96CFD188B2B4B009FDB8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05E96CCC188AA6C1009FDB8C /* Debug */ = {
@@ -250,6 +371,44 @@
 			};
 			name = Release;
 		};
+		05E96D04188B2B4B009FDB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThirdTask Tests/ThirdTask Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ThirdTask Tests/ThirdTask Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		05E96D05188B2B4B009FDB8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThirdTask Tests/ThirdTask Tests-Prefix.pch";
+				INFOPLIST_FILE = "ThirdTask Tests/ThirdTask Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -269,6 +428,16 @@
 				05E96CD0188AA6C1009FDB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E96D06188B2B4B009FDB8C /* Build configuration list for PBXNativeTarget "ThirdTask Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E96D04188B2B4B009FDB8C /* Debug */,
+				05E96D05188B2B4B009FDB8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

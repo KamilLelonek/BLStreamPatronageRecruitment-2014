@@ -22,7 +22,5 @@ typedef NS_ENUM(NSInteger, TripPreference) {
 
 @property (nonatomic, weak) id <ZooTripDelegate> delegate;
 - (void) start;
-
 - (id) findBestPathByUserPreference:(TripPreference) tripPreference;
-
 @end

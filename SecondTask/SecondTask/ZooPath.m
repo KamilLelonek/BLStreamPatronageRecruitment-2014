@@ -27,20 +27,20 @@
     self = [super init];
     if (self) {
         zooPathDictionary = [@{
-                                NAME:      [aName   copy],
-                                TIME:      [aTime   copy],
-                                LENGTH:    [aLength copy],
-                                RATING:    [aRating copy]
+                                NAME:   aName,
+                                TIME:   aTime,
+                                LENGTH: aLength,
+                                RATING: aRating
                                } mutableCopy];
     }
     
     return self;
 }
 
-+ (id) zooPathWithName:    (NSString*) aName
-               andTime:    (NSNumber*) aTime
-             andLength:    (NSNumber*) aLength
-             andRating:    (NSNumber*) aRating
++ (id) zooPathWithName: (NSString*) aName
+               andTime: (NSNumber*) aTime
+             andLength: (NSNumber*) aLength
+             andRating: (NSNumber*) aRating
 {
     return [[ZooPath alloc] initWithName: aName
                                  andTime: aTime
@@ -57,7 +57,8 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat: @"\n{\n\tname: %@,\n\ttime: %@h,\n\tlength: %@m,\n\trating: %@\n}", [self name], [self time], [self length], [self rating]];
+    return [NSString stringWithFormat: @"\n{\n\tname: %@,\n\ttime: %@h,\n\tlength: %@m,\n\trating: %@\n}",
+                                                  [self name], [self time], [self length], [self rating]];
 }
 
 @end

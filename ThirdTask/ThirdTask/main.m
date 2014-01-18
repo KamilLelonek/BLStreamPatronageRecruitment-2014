@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StorageHelper.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        NSLog(@"Hello, World!");
+        [[StorageHelper sharedStorageHelper] readData];
     }
     return 0;
 }
