@@ -1,0 +1,38 @@
+Zamiast opisu propozycji gdzie i jaki blok można zastosować w kodzie programu, po prostu zdefiniowałem bloki w programie.
+
+Bloki, które stworzyłem:
+
+
+    - (DataReader) readData {
+        return ^{
+            return [NSKeyedUnarchiver unarchiveObjectWithFile: filePath];
+        };
+    }
+
+    - (DataWriter) writeData {
+        return ^(UserData* userData) {
+            return [NSKeyedArchiver archiveRootObject: userData toFile: filePath];
+        };
+    }
+
+    LocationUpdater calculateTimeBetween =  ^(Location* previousLocation, Location* nextLocation) {
+        NSTimeInterval lastDiff = [previousLocation.date timeIntervalSince1970];
+        NSTimeInterval nextDiff = [nextLocation.date     timeIntervalSince1970];
+        return nextDiff - lastDiff;
+    };
+
+    LocationUpdater calculateLengthBetween =  ^(Location* previousLocation, Location* nextLocation) {
+        double xDiff = nextLocation.x - previousLocation.x;
+        double yDiff = nextLocation.y - previousLocation.y;
+        return sqrt(pow(xDiff, 2) + pow(yDiff, 2));
+    };
+
+    LocationUpdater calculateSpeedBetween =  ^(Location* previousLocation, Location* nextLocation) {
+        double lenthInUnits  = calculateLengthBetween(previousLocation, nextLocation);
+        double timeInSeconds = calculateTimeBetween(previousLocation,   nextLocation);
+        return timeInSeconds ? lenthInUnits / timeInSeconds : 0;
+    };
+
+To chyba najbardziej sensowne miejsca do wykorzystania bloków, chociaż szczerze mówiąc trudno mi powiedzieć gdzie jeszcze mogły by mieć zastosowanie w tym programie.
+
+W Objecitve-C brakuje mi wyrażeń lambda (znanych z C#, Scali, czy JavaScript-u) dla kolekcji i jeżeli miałbym wykonać jakiekolwiek działanie modyfikujące kolekcję to użyłbym bloków właśnie po to, aby takie wyrażenie zasymulować.

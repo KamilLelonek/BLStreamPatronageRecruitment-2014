@@ -9,27 +9,34 @@
 #import "GpsSimulator.h"
 #import "Location.h"
 
-#define TimeInterval 60 * 60 /* minutes */ * 24 /* hours */
+#define TIME_PERIOD 60 * 60 /* minutes */ * 24 /* hours */
+#define STEP_SIZE 10
 
-static NSInteger step;
+static NSInteger lastPosition;
 static NSDate    *date;
 
 @implementation GpsSimulator
     + (void) initialize {
         if (self == [GpsSimulator class]) {
-            step = 0;
-            date = [[NSDate date] dateByAddingTimeInterval: TimeInterval];
+            date = [self getLaterDateFrom: [NSDate date] by: TIME_PERIOD];
         }
     }
 
     + (Location *) getCurrentLocation {
-        NSInteger randomX = step + arc4random_uniform(11);
-        NSInteger randomY = step + arc4random_uniform(11);
+        NSInteger randomX = [self randomNumberFrom: lastPosition to: STEP_SIZE];
+        NSInteger randomY = [self randomNumberFrom: lastPosition to: STEP_SIZE];
         Location *location = [[Location alloc] initWithX: randomX andY: randomY andDate: date];
+        date = [self getLaterDateFrom: date by: TIME_PERIOD];
         
-        step += 10;
-        date = [date dateByAddingTimeInterval: TimeInterval];
-        
+        lastPosition += STEP_SIZE;
         return location;
+    }
+
+    + (NSDate *) getLaterDateFrom: (NSDate *) date by: (NSInteger) period {
+        return [date dateByAddingTimeInterval: period];
+    }
+
+    + (NSInteger) randomNumberFrom: (NSInteger) lowerBoundary to: (NSInteger) upperBoundary {
+        return lowerBoundary + arc4random_uniform((int)upperBoundary + 1);
     }
 @end

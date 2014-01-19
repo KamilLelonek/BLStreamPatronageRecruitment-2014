@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface UserData : NSObject <NSCoding>
     @property (atomic) NSMutableArray *locations;
-    @property (atomic) float length;
-    @property (atomic) float time;
-    @property (atomic) float speed;
+    @property (atomic) double length;
+    @property (atomic) double time;
+    @property (atomic) double speed;
+
+    - (void) addNewLocation: (Location*) location;
 @end
