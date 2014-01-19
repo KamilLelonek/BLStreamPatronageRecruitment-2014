@@ -10,5 +10,5 @@
 #include "Location.h"
 
 @interface GpsSimulator : NSObject
-    -(Location *) getCurrentLocation;
+    + (Location *) getCurrentLocation;
 @end

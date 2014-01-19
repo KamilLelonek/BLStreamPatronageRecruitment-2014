@@ -13,7 +13,7 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        [[StorageHelper sharedStorageHelper] readData];
+        NSLog(@"%d", [[NSDate date] compare:[NSDate date]]);
     }
     return 0;
 }

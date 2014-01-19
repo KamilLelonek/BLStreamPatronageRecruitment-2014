@@ -19,6 +19,9 @@
 		05E96D08188B2B74009FDB8C /* StorageHelper_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */; };
 		05E96D09188B2E5E009FDB8C /* StorageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CF1188B1B80009FDB8C /* StorageHelper.m */; };
 		05E96D0A188B2E7F009FDB8C /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD5188AA741009FDB8C /* UserData.m */; };
+		05E96D0C188B4E4D009FDB8C /* GpsSimulator_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96D0B188B4E4D009FDB8C /* GpsSimulator_Test.m */; };
+		05E96D0D188B501F009FDB8C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD8188AA754009FDB8C /* Location.m */; };
+		05E96D0E188B502B009FDB8C /* GpsSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E96CD2188AA733009FDB8C /* GpsSimulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,7 @@
 		05E96CFD188B2B4B009FDB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		05E96D01188B2B4B009FDB8C /* ThirdTask Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThirdTask Tests-Prefix.pch"; sourceTree = "<group>"; };
 		05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StorageHelper_Test.m; path = ../StorageHelper_Test.m; sourceTree = "<group>"; };
+		05E96D0B188B4E4D009FDB8C /* GpsSimulator_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GpsSimulator_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		05E96CF9188B2B4B009FDB8C /* ThirdTask Tests */ = {
 			isa = PBXGroup;
 			children = (
+				05E96D0B188B4E4D009FDB8C /* GpsSimulator_Test.m */,
 				05E96D07188B2B74009FDB8C /* StorageHelper_Test.m */,
 				05E96CFA188B2B4B009FDB8C /* Supporting Files */,
 			);
@@ -257,9 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E96D0E188B502B009FDB8C /* GpsSimulator.m in Sources */,
+				05E96D0D188B501F009FDB8C /* Location.m in Sources */,
 				05E96D0A188B2E7F009FDB8C /* UserData.m in Sources */,
 				05E96D09188B2E5E009FDB8C /* StorageHelper.m in Sources */,
 				05E96D08188B2B74009FDB8C /* StorageHelper_Test.m in Sources */,
+				05E96D0C188B4E4D009FDB8C /* GpsSimulator_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
